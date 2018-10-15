@@ -1,79 +1,80 @@
 @font-face {
-  font-family: title1;
+  font-family: titles;
   src: url(../fonts/Bauhaus-93_6274.ttf); }
 @font-face {
-  font-family: title2;
+  font-family: subtitles;
   src: url(../fonts/Montserrat-Bold.ttf); }
 @font-face {
-  font-family: title3;
+  font-family: desriptions;
   src: url(../fonts/Montserrat-Regular.ttf); }
-header {
-  background-image: url("../../assets/img/camisa_blanca_js_azul.png");
-  width: 100%;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  border-bottom: #25D366; }
+* {
+  box-sizing: border-box; }
 
+html, body {
+  margin: auto;
+  width: 100%;
+  overflow: auto; }
+
+hr {
+  width: 75%;
+  color: #266DD3; }
+
+/* ---------------------- Home ---------------------- */
 .logo p {
-  font-family: "title1", sans-serif;
+  font-family: "titles", monospace, sans-serif;
+  color: #266DD3;
   margin: 16px 46px;
   font-size: 40px;
-  letter-spacing: 3px;
+  letter-spacing: 3.1px;
   line-height: 60px;
-  font-weight: bold;
   position: fixed;
   float: left;
-  color: #DDDBF1;
   text-transform: uppercase; }
 
 nav {
-  position: fixed;
+  line-height: 400px;
   width: 100%;
-  line-height: 30px; }
-
-nav ul {
-  background-color: rgba(38, 110, 211, 0.596);
-  overflow: hidden;
-  list-style: none;
-  color: #fff;
-  padding: 0;
-  line-height: 60px;
-  text-align: right;
-  margin: 0;
-  padding-right: 40px;
-  padding-left: 4px;
-  margin-bottom: 100px;
-  transition: 1s; }
-
-nav.black ul {
-  background: #266DD3; }
+  position: fixed; }
+  nav ul {
+    color: #DDDBF1;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+    padding-right: 40px;
+    padding-left: 4px;
+    line-height: 60px;
+    overflow: hidden;
+    list-style: none;
+    text-align: right;
+    transition: 1s; }
 
 nav ul li {
   display: inline-block;
   padding: 16px 5px; }
 
 nav ul li a {
-  font-family: "title3", sans-serif;
-  text-decoration: none;
-  color: #fff;
+  font-family: "desriptions", sans-serif;
+  color: #3C474B;
   font-size: 17px;
   margin: 0px 5px;
   padding: 5px 5px;
-  position: relative;
   z-index: 0;
+  text-decoration: none;
+  position: relative;
   cursor: pointer; }
+
+nav.black ul {
+  background: #FFB400; }
 
 div.topBotomBordersIn a:before,
 div.topBotomBordersIn a:after {
-  background: #FFB400;
-  position: absolute;
+  background: #266DD3;
   left: 0px;
   width: 100%;
   height: 2px;
-  content: "";
   opacity: 0;
+  position: absolute;
+  content: "";
   transition: all 0.5s; }
 
 div.topBotomBordersIn a:before {
@@ -90,20 +91,48 @@ div.topBotomBordersIn a:hover:after {
   transform: translateY(0px); }
 
 .menu-icon {
-  line-height: 60px;
   width: 100%;
-  background: #266DD3;
-  color: #FFB400;
+  padding: 15px 24px;
+  line-height: 60px;
   text-align: right;
   box-sizing: border-box;
-  padding: 15px 24px;
   cursor: pointer;
   display: none; }
 
+.welcome {
+  height: 100vh; }
+  .welcome h1, .welcome p {
+    padding: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; }
+  .welcome h1 {
+    font-family: "titles", monospace, sans-serif;
+    color: #266DD3;
+    font-size: 6.2em;
+    letter-spacing: 3.7px;
+    margin: 0px 20px 20px 20px;
+    border-bottom: 5px solid #FFB400;
+    text-transform: uppercase; }
+  .welcome p {
+    font-family: "subtitles", monospace, sans-serif;
+    color: #3C474B;
+    font-size: 1.3em;
+    margin: 100px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
 /* ----------------------Gallery---------------------- */
 .responsive {
-  width: 30.99%;
+  width: 29.99%;
   float: left; }
+
+.carousel h1 {
+  font-family: "title2";
+  color: #266DD3;
+  text-align: center; }
 
 div.gallery {
   margin-left: 100px;
@@ -123,12 +152,13 @@ div.gallery img {
   border-radius: 20px; }
 
 div.desc {
-  background: #FFB400;
+  background: #FFC539;
   color: #fff;
   font-family: "title3";
   padding: 10px 5px 10px 5px;
   text-align: center; }
 
+/* ---------------------- Footer ---------------------- */
 .footer {
   margin: 0;
   padding: 0;
@@ -213,7 +243,7 @@ div.desc {
   color: #25D366; }
 
 .icons .contactInsta i {
-  background: var(--instagram);
+  background: linear-gradient(to top right, #fccc63, #fccc63, #cd486b, #8a3ab9, #4c68d7);
   color: #fff; }
 
 .icons .contactInsta a {
@@ -274,38 +304,39 @@ div.desc {
     font-size: 18px;
     padding: 50px; } }
 @media only screen and (max-width: 860px) {
-  div.menu-icon {
-    margin: 0px; }
-
   .logo {
     position: fixed;
     margin-top: 0px;
     top: 0; }
+    .logo p {
+      text-align: right;
+      font-size: 37px; }
 
-  .logo p {
-    text-align: center;
-    font-size: 27px; }
+  div.menu-icon {
+    background: #FFB400;
+    margin: 0px; }
 
-  nav ul {
-    max-height: 0px;
-    background: #266DD3; }
-
-  nav.black ul {
-    background: #266DD3;
-    position: fixed; }
+  .menu-icon {
+    color: #266DD3;
+    display: block;
+    top: 0; }
 
   .showing {
     max-height: 34em;
     padding: 0px; }
 
+  nav ul {
+    background: #FFB400;
+    max-height: 0px; }
+
+  nav.black ul {
+    background: #FFC539;
+    position: block; }
+
   nav ul li {
     width: 100%;
     padding: 5px;
     text-align: center; }
-
-  .menu-icon {
-    display: block;
-    top: 0; }
 
   .footer .myWord {
     color: #DDDBF1;
@@ -319,16 +350,5 @@ div.desc {
   .icons .contactWa {
     text-align: center;
     margin-left: 70px; } }
-* {
-  box-sizing: border-box; }
-
-html, body {
-  margin: auto;
-  width: 100%;
-  overflow: auto; }
-
-hr {
-  width: 75%;
-  color: #266DD3; }
 
 /*# sourceMappingURL=main.css.map */

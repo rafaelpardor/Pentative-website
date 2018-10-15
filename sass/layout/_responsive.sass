@@ -44,38 +44,39 @@
         padding: 50px
 
 @media only screen and (max-width: 860px)
-    div.menu-icon
-        margin: 0px
-
     .logo
         position: fixed
         margin-top: 0px
         top: 0
+        p
+            text-align: right
+            font-size: 37px
 
-    .logo p
-        text-align: center
-        font-size: 27px
+    div.menu-icon //Responsive nav bar 
+        background: $main-yellow
+        margin: 0px
 
-    nav ul
-        max-height: 0px
-        background: $main-blue
-
-    nav.black ul
-        background: $main-blue
-        position: fixed
-
+    .menu-icon 
+        color: $main-blue
+        display: block
+        top: 0
+        
     .showing
         max-height: 34em
         padding: 0px
+
+    nav ul
+        background: $main-yellow
+        max-height: 0px
+
+    nav.black ul
+        background: $main-yellow-light //Transicion
+        position: block
 
     nav ul li
         width: 100%
         padding: 5px
         text-align: center
-
-    .menu-icon 
-        display: block
-        top: 0
     
     .footer .myWord 
         color: $main-grey-light
