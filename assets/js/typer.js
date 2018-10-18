@@ -1,6 +1,6 @@
 var typer = {
   words: [
-    'Suscribete   .   .   .   ',
+    'Suscríbete   .   .   .   ',
   ],
   wordIndex: 0,
   speed: 100,
