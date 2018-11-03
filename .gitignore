@@ -1,6 +1,6 @@
 .vscode
-
-.idea
 *.map
-# *.sass
+.sass
+*.sass
 *.sassc
+*.map
