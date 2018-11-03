@@ -1,0 +1,105 @@
+/* ----------------------Gallery---------------------- */
+.tabs
+  height: 40px
+  display: flex
+  border-bottom: 1px solid $main-blue
+  margin: 0
+  padding: 0
+
+.tabs li
+  text-align: center
+  color: $main-grey-dark
+  font-family: subtitles
+  height: 90%
+  display: inline-block
+  width: 100px
+  position: relative
+  z-index: 2
+  padding: 16px 20px 10px
+  cursor: pointer
+  font-family: sans-serif
+  opacity: .5
+  transition: font-weight .3s ease-in-out, opacity .1s ease-in-out .1s, color .3s ease-in-out
+  font-size: 12px
+
+.tabs li:before
+  background-color: $main-blue
+  color: $main-yellow
+  content: ''
+  width: 100px
+  height: 100%
+  position: absolute
+  left: 0
+  bottom: 0
+  z-index: -1
+  transform: perspective(.5em) rotateX(90deg)
+  border-radius: 100% 100% 0 0
+  transition: border-radius .2s ease-out,transform .2s ease-out
+  /* middle tab */
+  transform-origin: bottom
+
+/* first tab */
+.tabs li:first-of-type:before
+  transform-origin: left bottom
+/* last tab */
+.tabs li:last-of-type:before
+  transform-origin: right bottom
+
+.tabs li.active
+  opacity: 1
+  color: $main-grey-light
+  font-weight: 700
+
+.tabs li.active:before
+  transform: perspective(.5em) rotateX(2deg)
+  border-radius: 10px 10px 0 0
+
+.tabs-content-container
+  font-family: descriptions
+  font-size: .9em
+
+.tabs-content-container .tab-content
+  display: none
+
+.tabs-content-container .tab-content.active
+  display: block
+
+.text-center 
+  text-align: center
+  margin-top: 1.2em
+  margin-bottom: 0.5em
+  color: #266DD3
+  font-family: "subtitles" 
+
+.container
+  max-width: 90%
+  background-color: #f2f2f2
+  box-shadow: 0 10px 35px #FFB400
+  margin: 5% auto
+  padding: 20px
+  border-radius: 10px
+  overflow: hidden
+  box-sizing: border-box 
+
+.lightbox-gallery 
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center 
+
+.lightbox-gallery div 
+  margin: 15px
+  flex-basis: 220px 
+
+.lightbox-gallery div > img 
+  max-width: 100%
+  border: 2px solid #266DD3
+  border-radius: 10px
+  display: block
+  background-color: #F2F2F2 
+
+.lightbox-gallery div p 
+  margin-top: 10px
+  color: #3C474B
+  text-align: center
+  font-family: "descriptions" 
